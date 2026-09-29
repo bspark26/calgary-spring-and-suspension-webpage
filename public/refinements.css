@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("assets/fonts/barlow-condensed-600.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("assets/fonts/barlow-condensed-700.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("assets/fonts/barlow-condensed-800.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+
+:root {
+  --display: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+  --paper: #f3f3f0;
+  --coal: #1c2325;
+}
+
+h1, h2, h3 {
+  font-family: var(--display);
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: -.012em;
+}
+h1 { font-size: clamp(4.2rem, 6.8vw, 7rem); }
+h2 { font-size: clamp(3.2rem, 5.1vw, 5rem); }
+
+.site-header { background: #050606; }
+.nav-row { min-height: 105px; }
+.brand { width: 230px; }
+.brand img { height: 100px; object-fit: cover; }
+.primary-nav { letter-spacing: .11em; }
+
+.hero-grid { grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); }
+.hero-copy { padding-right: 55px; }
+.hero h1 {
+  max-width: 820px;
+  font-size: clamp(4.7rem, 6.15vw, 7rem);
+  line-height: .92;
+  margin-bottom: 30px;
+}
+.hero h1 em { font-weight: 800; }
+.hero-copy > p { max-width: 530px; line-height: 1.52; }
+.hero-proof { align-items: center; }
+.hero-proof strong { font: 700 2.6rem/1 var(--display); }
+.hero-visual-label {
+  font: 700 1rem/1 var(--display);
+  letter-spacing: .12em;
+  padding: 12px 16px;
+}
+
+.ticker > .shell { font: 700 1.24rem/1 var(--display); letter-spacing: .1em; }
+.section-heading h2 { line-height: .98; }
+.service-card { border-color: #d5d9d7; }
+.service-card-body { padding: 30px 30px 32px; }
+.service-card h3 {
+  font: 700 2.1rem/1 var(--display);
+  text-transform: none;
+  letter-spacing: -.012em;
+  margin: 14px 0 12px;
+}
+.service-img { aspect-ratio: 1.55; }
+
+.feature-copy h2 { line-height: .93; }
+.quote-grid blockquote { border-top-width: 3px; }
+.cta-inner h2 { line-height: .95; }
+.footer h3, .list-panel h3 {
+  font-family: var(--display);
+  font-weight: 700;
+  text-transform: none;
+}
+.footer h3 { font-size: 1.55rem; }
+.list-panel h3 { font-size: 2.2rem; line-height: 1; }
+.form-aside a { font: 700 2.25rem/1 var(--display); }
+
+.page-hero h1, .detail-copy h1 { font-size: clamp(4.3rem, 6.2vw, 6.7rem); line-height: .95; }
+.contact-card h2 { font-size: clamp(3.2rem, 4.2vw, 4.5rem); }
+.detail-copy h1 { margin: 18px 0 24px; }
+
+@media (max-width: 1050px) {
+  .hero-copy { padding-right: 25px; }
+  .hero h1 { font-size: clamp(4.2rem, 6.8vw, 5.8rem); }
+}
+
+@media (max-width: 760px) {
+  .nav-row { min-height: 81px; }
+  .brand { width: 155px; }
+  .brand img { height: 76px; }
+  .primary-nav { top: 81px; }
+  .hero-copy { padding: 16px 0 53px; }
+  .hero h1 { font-size: clamp(3.8rem, 12.4vw, 5.7rem); line-height: .94; }
+  .hero .hero-actions .button-red { display: none; }
+  .hero-visual { min-height: 270px; }
+  .hero-proof { gap: 22px; }
+  .hero-proof strong { font-size: 2rem; }
+  .section-heading h2 { font-size: clamp(3.1rem, 10vw, 4.7rem); }
+  .service-card h3 { font-size: 2rem; }
+  .page-hero h1, .detail-copy h1 { font-size: clamp(3.8rem, 11vw, 5.3rem); }
+}
+
+@media (max-width: 390px) {
+  .hero h1 { font-size: 3.55rem; }
+}
