@@ -1,4 +1,5 @@
 name: Publish prototype to GitHub Pages
+# Deploy the website files from public/.
 
 on:
   push:
